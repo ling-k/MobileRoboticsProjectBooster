@@ -21,5 +21,7 @@
 
   <node name="spawn_urdf_1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model turtlebot3_waffle -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
 
+  <node name="republish" pkg="image_transport" type="republish" args="raw in:=/camera/rgb/image_raw compressed out:=/camera/rgb/image" />
+
 
 </launch>
